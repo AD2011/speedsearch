@@ -5,7 +5,7 @@
 ### Installation
 You can install SpeedSearch via pipx with the following command:
 ```
-pipx install speedsearch
+pipx install git+https://github.com/AD2011/speedsearch.git
 ```
 
 ### Features
