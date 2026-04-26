@@ -45,23 +45,10 @@ def handle_speedtest_cli_missing():
     Prompt user with instructions to install the official Speedtest CLI.
     """
     print("\n" + "="*70)
-    print("❌ ERROR: Official Speedtest CLI is not installed")
+    print("ERROR: Official Speedtest CLI is not installed")
     print("="*70)
     print("\nspeedsearch requires the official Ookla Speedtest CLI.")
-    print("\n📖 Installation Instructions:")
-    print("-" * 70)
-    print("Visit: https://www.speedtest.net/apps/cli")
-    print("\nOr install using your system package manager:")
-    print("\n  macOS (Homebrew):")
-    print("    brew install speedtest-cli")
-    print("\n  Ubuntu/Debian:")
-    print("    sudo apt-get install speedtest-cli")
-    print("\n  CentOS/RHEL:")
-    print("    sudo yum install speedtest-cli")
-    print("\n  Windows (Chocolatey):")
-    print("    choco install speedtest-cli")
-    print("\n  Or download directly from:")
-    print("    https://www.speedtest.net/apps/cli")
+    print("\nInstallation Instructions: https://www.speedtest.net/apps/cli")
     print("-" * 70)
     sys.exit(1)
 
@@ -70,7 +57,7 @@ def handle_conflicting_pip_package():
     Prompt user to uninstall the conflicting pip package.
     """
     print("\n" + "="*70)
-    print("⚠️  CONFLICT: speedtest-cli pip package detected")
+    print("CONFLICT: speedtest-cli pip package detected")
     print("="*70)
     print("\nA conflicting package 'speedtest-cli' from PyPI is installed.")
     print("This may cause issues with speedsearch.")
@@ -88,7 +75,7 @@ def handle_conflicting_pip_package():
             print("✗ Failed to uninstall. Please try: pip uninstall speedtest-cli")
             sys.exit(1)
     else:
-        print("⚠️  Please resolve the conflict before continuing.")
+        print("Please resolve the conflict before continuing.")
         sys.exit(1)
 
 class SpeedtestPrompt:
